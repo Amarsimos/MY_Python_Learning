@@ -1,0 +1,271 @@
+{
+    /*vim*/
+    // 绑定vim前导键
+    "vim.leader": "<space>",
+    // 启用easymotion插件
+    "vim.easymotion": true,
+    // 启用系统粘贴板作为vim寄存器
+    "vim.useSystemClipboard": true,
+    // 由vim接管ctrl+any的按键，而不是vscode
+    "vim.useCtrlKeys": true,
+    // 突出显示与当前搜索匹配的所有文本
+    "vim.hlsearch": true,
+    // 智能行号
+    "vim.smartRelativeLine": true,
+    // 普通模式下的非递归按键绑定
+    "vim.normalModeKeyBindingsNonRecursive": [],
+    // 插入模式下的非递归按键绑定
+    "vim.insertModeKeyBindings": [],
+    // 命令模式下的非递归按键绑定
+    "vim.commandLineModeKeyBindingsNonRecursive": [],
+    // 可视模式下的非递归按键绑定
+    "vim.operatorPendingModeKeyBindings": [],
+    // 下面定义的按键将交由vscode进行处理，而不是vscode-vim插件
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-d>": true, // 向下滚动半页
+        "<C-f>": true, // 向下滚动一页
+        "<C-e>": true, // 向下滚动一行
+        "<C-s>": true,
+        "<C-z>": false,
+        "<C-c>": true,
+        "<C-v>": true,
+        "<C-x>": true,
+    },
+    /*markdown*/
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
+    },
+    /*editor*/
+    // "editor.fontFamily": "'JetBrains Mono', '思源黑体', monospace", //字体
+    "editor.fontFamily": "'JetBrains Mono','TsukuARdGothic Std',monospace", //字体
+    "editor.fontLigatures": true, //启用字体连字
+    "editor.fontSize": 13, //字体大小
+    "editor.formatOnPaste": true, //在粘贴时格式化代码
+    "editor.formatOnType": true, //敲完一行代码自动格式化
+    "editor.suggestSelection": "recentlyUsedByPrefix", //自动提示
+    "editor.detectIndentation": false, //自动检测缩进
+    "editor.cursorBlinking": "smooth", //光标闪烁
+    "editor.smoothScrolling": true, //平滑滚动
+    "editor.cursorSmoothCaretAnimation": "on", //光标平滑过渡动画,
+    "editor.guides.bracketPairs": "active", //括号匹配
+    "editor.renderWhitespace": "boundary", // 显示空白字符
+    "editor.formatOnSave": true, // #值设置为true时，每次保存的时候自动格式化；
+    "files.autoGuessEncoding": true, //自动识别编码
+    "workbench.list.smoothScrolling": true, //列表平滑滚动
+    "workbench.editor.wrapTabs": true, //编辑器标签自动换行
+    "editor.rulers": [
+        120
+    ], //每120行就显示一条线
+    "editor.tokenColorCustomizations": {
+        /*MIKU:39C5BB
+        RIN:FFA500
+        LEN:FFE211
+        LUKA:FFC0CBs
+        MEIKO:D80000
+        KAITO:0000FF
+        TIANYI:66CCFF
+        MIKU:99DD00
+        ALING:EE0000*/
+        "comments": "#99DD00",
+        "keywords": "#FFC0CB",
+        "variables": "#39C5BB",
+        "strings": "#FFE211",
+        "functions": "#66CCFF",
+        "numbers": "#FFA500",
+        "types": "#EE0000",
+        "[Moegi Dark][Moegi Black][Moegi Light]": {
+            "textMateRules": [
+                {
+                    "name": "Comment Italics",
+                    "scope": [
+                        "comment",
+                        "punctuation.definition.comment"
+                    ],
+                    "settings": {
+                        "fontStyle": "italic",
+                    }
+                },
+                {
+                    "name": "Keyword Bold",
+                    "scope": [
+                        "keyword",
+                        "storage.type",
+                        "storage.modifier",
+                    ],
+                    "settings": {
+                        "fontStyle": "bold italic" // If you want to enable italics as well, use "bold italic"
+                    }
+                }
+            ],
+        },
+    },
+    /*terminal*/
+    "terminal.integrated.fontFamily": "monospace", //终端字体
+    "terminal.integrated.cursorBlinking": true, //终端光标闪烁
+    "terminal.integrated.rightClickBehavior": "default", //在终端中右键时显示菜单而不是粘贴（个人喜好）
+    /*workbench*/
+    "workbench.startupEditor": "newUntitledFile", //启动时打开的编辑器
+    "workbench.editor.enablePreview": false, //关闭预览
+    "workbench.iconTheme": "vs-minimal", //图标主题
+    //"workbench.settings.editor": "json", //主题
+    /*extensions*/
+    "extensions.ignoreRecommendations": true, //忽略推荐扩展
+    "extensions.autoUpdate": "onlyEnabledExtensions", //自动更新扩展
+    /*search*/
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/target": true,
+        "**/logs": true,
+    }, // 在使用搜索功能时，将这些文件夹/文件排除在外
+    /*files*/
+    "files.autoSave": "onFocusChange", // //失去焦点后自动保存
+    "files.exclude": {
+        "**/*.git": true,
+        "**/*.exe": true,
+        "**/*.svn": true,
+        "**/*.hg": true,
+        "**/*.CVS": true,
+        "**/*.DS_Store": true,
+        // "**/*.exe": {
+        //     "when": "$(basename).c" //ts编译后生成的c文件将不会显示在工作空中
+        // },
+        "**/node_modules": true
+    }, // 这些文件将不会显示在工作空间中
+    /*explorer*/
+    "explorer.confirmDelete": false, //取消删除文件时弹出确认框
+    /**window*/
+    "window.zoomLevel": 1, //窗口缩放等级
+    "window.dialogStyle": "custom", //对话框样式
+    "window.menuBarVisibility": "visible", //在全屏模式下仍然显示窗口顶部菜单（没有菜单很难受）
+    /*CmakeConfig*/
+    "cmake.options.advanced": {
+        "build": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "launch": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "debug": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        }
+    },
+    "C_Cpp.default.includePath": [
+        "D:\\mingw64\\include",
+        "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include"
+    ],
+    "C_Cpp.errorSquiggles": "disabled",
+    /* Git config */
+    "git.autofetch": true,
+    /*debug*/
+    "debug.toolBarLocation": "commandCenter", //固定调试时工具条的位置，防止遮挡代码内容（个人喜好）
+    // "debug.internalConsoleOptions": "openOnSessionStart", //每次调试都打开调试控制台，方便调试
+    "debug.showBreakpointsInOverviewRuler": true, //在滚动条标尺上显示断点的位置，便于查找断点的位置
+    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup", //在启动调试会话前保存除了无标题文档以外的文档
+    "debug.onTaskErrors": "debugAnyway",
+    /**security*/
+    "security.workspace.trust.untrustedFiles": "open",
+    /*Latex Workshop*/
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (xelatex)",
+            "tools": [
+                "xelatexmk"
+            ]
+        },
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "lualatexmk"
+            ]
+        },
+        {
+            "name": "latexmk (latexmkrc)",
+            "tools": [
+                "latexmk_rconly"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex * 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "Compile Rnw files",
+            "tools": [
+                "rnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "Compile Jnw files",
+            "tools": [
+                "jnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "Compile Pnw files",
+            "tools": [
+                "pnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "tectonic",
+            "tools": [
+                "tectonic"
+            ]
+        }
+    ],
+    /*code runner*/
+    "code-runner.runInTerminal": true, //在终端中运行代码
+    "code-runner.showExecutionMessage": false,
+    /**markdownlint*/
+    "markdownlint.config": {
+        "default": true,
+        "MD029": {
+            "style": "ordered"
+        },
+    }, //显示运行代码的消息
+    "markdownlint.run": "onSave", //保存时自动检查markdown语法
+    "git.confirmSync": false,
+    "window.newWindowProfile": "Default",
+    "workbench.colorTheme": "Moegi Black",
+    "fittencode.languagePreference.commentPreference": "zh-cn",
+    "fittencode.languagePreference.displayPreference": "zh-cn",
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.defaultLanguage": "c",
+    "leetcode.filePath": {
+        "default": {
+            "folder": "",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        }
+    },
+    "leetcode.nodePath": "C:\\Program Files\\nodejs\\node.exe",
+    "leetcode.workspaceFolder": "e:\\Zhangwangao\\200-Learn\\202-Leetcode",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "C_Cpp.configurationWarnings": "disabled",
+    "C_Cpp.default.cStandard": "gnu23",
+    "C_Cpp.default.customConfigurationVariables": {},
+    "github.gitProtocol": "ssh",
+    "workbench.settings.editor": "json",
+    "hediet.vscode-drawio.resizeImages": null,
+}

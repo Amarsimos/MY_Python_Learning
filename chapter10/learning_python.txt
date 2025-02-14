@@ -1,0 +1,8 @@
+in python you can write comments using # symbol
+in python you can write multi-line comments using triple quotes """ """
+in python you can use variables to store values
+in python you can use print() function to display values on the console
+in python you can use input() function to get user input from the console
+in python you can use if-else statements to make decisions
+in python you can use for loops to iterate over a sequence of values
+in python you can use while loops to repeat a block of code until a condition is met

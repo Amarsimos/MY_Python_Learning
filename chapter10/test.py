@@ -1,10 +1,15 @@
-filename = 'Alice in Wonderland.txt'
+import json
+
+filename = "usersname.json"
+
 try:
-    with open(filename, 'r', encoding='utf-8') as file:
-        contents = file.read()
+    with open(filename, "r") as f:
+        username = json.load(f)
 except FileNotFoundError:
-    print("Sorry, the file {filename} does not exist.")
+    username = input("What is your username? ")
+    with open(filename, "w") as f:
+        json.dump(username, f)
+        print("we'll remember you when you come back " + username + "!")
 else:
-    words = contents.split()
-    num_words = len(words)
-    print(f"The file {filename} has {num_words} words.")
+    print("Welcome back " + username + "!")
+

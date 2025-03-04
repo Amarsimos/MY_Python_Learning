@@ -11,7 +11,7 @@ class Settings():
 
         #子弹设置
         self.bullet_speed_factor = 3
-        self.bullet_width = 300
+        self.bullet_width = 1190
         self.bullet_height = 15
         self.bullet_color = 60,60,60
         self.bullets_allowed = 9
@@ -22,7 +22,7 @@ class Settings():
         self.fleet_direction = 1
 
         #难度系数
-        self.speedup_scale = 2
+        self.speedup_scale = 1.2
 
         self.initialize_dynamic_settings()
 

@@ -5,6 +5,7 @@ class GameStats():
         self.reset_stats()
         self.game_active = False
         self.high_score = self.load_high_score()
+        self.level = 1
 
     def load_high_score(self):
         filename = 'high_score.json'

@@ -1,6 +1,6 @@
 import pygame
-import ship
-import settings
+# import ship
+# import settings
 
 from pygame.sprite import Sprite
 
@@ -22,6 +22,10 @@ class Bullet(Sprite):
         self.color = ai_settings.bullet_color
         self.speed_factor = ai_settings.bullet_speed_factor
 
+    def update(self):
+        # 更新子弹位置
+        self.update_u()
+        
     def update_u(self):
         # 更新子弹位置
         self.y -= self.speed_factor
@@ -30,14 +34,6 @@ class Bullet(Sprite):
     def update_r(self):
         self.x += self.speed_factor
         self.rect.x = self.x
-        
-    def get_shot_flag(self):
-        # 开火
-        return self.shot
-    def put_shot_flag(self, flag):
-        # 开火
-        self.shot = flag
-
 
     def draw_bullet(self):
         # 绘制子弹

@@ -2,16 +2,15 @@ import pygame
 from pygame.sprite import Sprite
 
 class Alien(Sprite):
-
     def __init__(self, ai_settings, screen):
+        #继承Sprite类的初始化方法
         super(Alien, self).__init__()
+        
         self.screen = screen
         self.ai_settings = ai_settings
 
-
         self.image = pygame.image.load('images/alien.bmp')
         self.rect = self.image.get_rect()
-
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
 
